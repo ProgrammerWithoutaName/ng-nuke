@@ -1,0 +1,23 @@
+{
+  "name": "ng-nuke",
+  "version": "0.0.1",
+  "description": "Remakes angular repos",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine test"
+  },
+  "author": "Programmer Without A Name",
+  "license": "MIT",
+  "dependencies": {
+    "angular-dependency-parser": "c:/development/open/angular-dependency-parser",
+    "angular-es6-code-generator": "c:/development/open/angular-es6-code-generator",
+    "fs-extra": "^0.26.0",
+    "fs-promise": "^0.3.1",
+    "mkdirp": "^0.5.1",
+    "multi-promise": "c:/development/open/multi-promise"
+  },
+  "devDependencies": {
+    "fs-promise": "^0.3.1",
+    "jasmine": "^2.3.2"
+  }
+}
