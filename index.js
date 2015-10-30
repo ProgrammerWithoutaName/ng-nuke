@@ -33,28 +33,39 @@ let importedScripts = [
     "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/bower_components/angular-bootstrap-show-errors/src/showErrors.js"
 ];
 
+let adminImportedScripts = [
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-file-upload-shim.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/ng-infinite-scroll.min.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-animate.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-file-upload.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-resource.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-strap.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-strap.tpl.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/breeze.angular.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/textAngular/textAngular-sanitize.min.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/textAngular/textAngular.min.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/angular-ui-router/release/angular-ui-router.min.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/jasny-bootstrap.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/ui-sortable/sortable.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-idle.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-local-storage.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/moment/moment.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/ng-busy/build/angular-busy.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/angular-loading-bar/build/loading-bar.min.js",
+    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/ngQuickDate/dist/ng-quick-date.js"
+];
+
 let directories = [
     {
-        folderPath: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/app',
-
-        tags: {
-            web: true,
-            convert: true,
-            trackNonScriptFiles: true,
-            baseFolder: 'webApp',
-            relativeRemap: 'webApp',
-            oldBase: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web',
-            newBase: baseLocation
-        }
-    },{
         folderPath: 'C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Common/app',
 
         tags: {
             common: true,
             convert: true,
-            trackNonScriptFiles: true,
+            trackNonScriptFiles: false,
+            vendor: false,
             baseFolder: 'commonApp',
-            relativeRemap: 'commonApp',
+            relativeRemap: 'commonApp/importFix',
             oldBase: 'C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Common',
             newBase: baseLocation
         }
@@ -66,9 +77,9 @@ let directories = [
             convert: false,
             singleFile: true,
             vendor: true,
-            baseFolder: 'webApp',
-            relativeRemap: 'webApp/importFix',
-            oldBase: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/',
+            baseFolder: 'commonApp',
+            relativeRemap: 'commonApp/importFix',
+            oldBase: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web',
             newBase: baseLocation
         }
     }
