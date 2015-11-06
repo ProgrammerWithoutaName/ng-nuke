@@ -57,15 +57,26 @@ let adminImportedScripts = [
 
 let directories = [
     {
+        folderPath: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/app',
+
+        tags: {
+            web: true,
+            convert: true,
+            trackNonScriptFiles: true,
+            baseFolder: 'webApp',
+            relativeRemap: 'webApp',
+            oldBase: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web',
+            newBase: baseLocation
+        }
+    },{
         folderPath: 'C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Common/app',
 
         tags: {
             common: true,
             convert: true,
-            trackNonScriptFiles: false,
-            vendor: false,
+            trackNonScriptFiles: true,
             baseFolder: 'commonApp',
-            relativeRemap: 'commonApp/importFix',
+            relativeRemap: 'commonApp',
             oldBase: 'C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Common',
             newBase: baseLocation
         }
@@ -77,16 +88,14 @@ let directories = [
             convert: false,
             singleFile: true,
             vendor: true,
-            baseFolder: 'commonApp',
-            relativeRemap: 'commonApp/importFix',
-            oldBase: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web',
+            baseFolder: 'webApp',
+            relativeRemap: 'webApp/importFix',
+            oldBase: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/',
             newBase: baseLocation
         }
     }
 ];
 
-let doneParsing = false;
-let doneWriting = false;
 let error;
 let dependencyTree;
 let promiseTracker = new PromiseTracker();
