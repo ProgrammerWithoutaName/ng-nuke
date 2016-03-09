@@ -15,49 +15,16 @@ const baseLocation = path.join(__dirname, 'output');
 const moduleWriterFactory = ModuleWriter.buildModuleWriterFactory(codeGenerator);
 const componentWriterFactory = ComponentWriter.buildComponentWriterFactory(codeGenerator);
 
+/*
+ How it works:
+ You can specify either an array of files, or a folder path.
+*/
 
-
-let importedScripts = [
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/Scripts/angularuiselect2/select2.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/Scripts/angular-animate.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/Scripts/angular-file-upload.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/bower_components/angular-ui-router/release/angular-ui-router.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/bower_components/angular-google-analytics/dist/angular-google-analytics.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/bower_components/angular-scroll/angular-scroll.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/Scripts/breeze.angular.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/Scripts/angular-idle.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/Scripts/angular-local-storage.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/Scripts/globalize.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/bower_components/ng-busy/build/angular-busy.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/bower_components/ngQuickDate/dist/ng-quick-date.js",
-    "C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/bower_components/angular-bootstrap-show-errors/src/showErrors.js"
-];
-
-let adminImportedScripts = [
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-file-upload-shim.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/ng-infinite-scroll.min.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-animate.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-file-upload.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-resource.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-strap.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-strap.tpl.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/breeze.angular.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/textAngular/textAngular-sanitize.min.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/textAngular/textAngular.min.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/angular-ui-router/release/angular-ui-router.min.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/jasny-bootstrap.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/ui-sortable/sortable.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-idle.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/Scripts/angular-local-storage.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/moment/moment.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/ng-busy/build/angular-busy.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/angular-loading-bar/build/loading-bar.min.js",
-    "C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Admin/bower_components/ngQuickDate/dist/ng-quick-date.js"
-];
+let importedScripts = [ "C:/Path/To/Each/Imported/Normal/Script.js" ];
 
 let directories = [
     {
-        folderPath: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/app',
+        folderPath: 'C:/Path/To/Code/app',
 
         tags: {
             web: true,
@@ -65,11 +32,11 @@ let directories = [
             trackNonScriptFiles: true,
             baseFolder: 'webApp',
             relativeRemap: 'webApp',
-            oldBase: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web',
+            oldBase: 'C:/Path/To/Code/app',
             newBase: baseLocation
         }
     },{
-        folderPath: 'C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Common/app',
+        folderPath: 'C:/Path/To/Code/app',
 
         tags: {
             common: true,
@@ -77,7 +44,7 @@ let directories = [
             trackNonScriptFiles: true,
             baseFolder: 'commonApp',
             relativeRemap: 'commonApp',
-            oldBase: 'C:/development/olie2/smg.c3.olie2/Sgm.C3.OLIE2.Common',
+            oldBase: 'C:/Path/To/Code/app',
             newBase: baseLocation
         }
     },
@@ -90,7 +57,7 @@ let directories = [
             vendor: true,
             baseFolder: 'webApp',
             relativeRemap: 'webApp/importFix',
-            oldBase: 'C:/development/olie2/smg.c3.olie2/Smg.C3.OLIE2.Web/',
+            oldBase: 'C:/Path/To/Code/app',
             newBase: baseLocation
         }
     }
