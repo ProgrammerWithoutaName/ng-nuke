@@ -9,12 +9,12 @@
   "author": "Programmer Without A Name",
   "license": "MIT",
   "dependencies": {
-    "angular-dependency-parser": "c:/development/open/angular-dependency-parser",
-    "angular-es6-code-generator": "c:/development/open/angular-es6-code-generator",
+    "angular-dependency-parser": "git://github.com/programmerWithoutAName/angular-dependency-parser",
+    "angular-es6-code-generator": "git://github.com/programmerWithoutAName/angular-es6-code-generator",
     "fs-extra": "^0.26.0",
     "fs-promise": "^0.3.1",
     "mkdirp": "^0.5.1",
-    "multi-promise": "c:/development/open/multi-promise"
+    "multi-promise": "git://github.com/programmerWithoutAName/multi-promise"
   },
   "devDependencies": {
     "fs-promise": "^0.3.1",
