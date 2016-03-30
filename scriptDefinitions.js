@@ -7,7 +7,11 @@ const baseLocation = path.join(__dirname, 'output');
  You can specify either an array of files, or a folder path.
  */
 
-let importedScripts = [ "C:/Development/TestCode/angularblog-master/js/angular-route.js" ];
+let importedScripts = [
+    "C:/Development/refactoring-angular/bower_components/angular-animate/angular-animate.js",
+    "C:/Development/refactoring-angular/bower_components/angular-sanitize/angular-sanitize.js",
+    "C:/Development/refactoring-angular/bower_components/angular-ui-router/release/angular-ui-router.js"
+];
 let directories = [
     {
         individualScripts: true,
@@ -16,25 +20,41 @@ let directories = [
             convert: false,
             singleFile: true,
             vendor: true,
-            baseFolder: 'webApp',
-            relativeRemap: 'webApp/importFix',
-            oldBase: 'C:/Development/TestCode/angularblog-master',
+            collapse: ['ui.router', 'ngAnimate', 'ngSanitize'],
+            baseFolder: 'src',
+            relativeRemap: 'src/importFix',
+            oldBase: 'C:/Development/refactoring-angular/',
             newBase: baseLocation
         }
     },
     {
-        folderPath: 'C:/Development/TestCode/angularblog-master/app',
+        folderPath: 'C:/Development/refactoring-angular/src/',
 
         tags: {
             web: true,
             convert: true,
             trackNonScriptFiles: true,
-            baseFolder: 'webApp',
-            relativeRemap: 'webApp',
-            oldBase: `C:/Development/TestCode/angularblog-master`,
+            baseFolder: 'src',
+            relativeRemap: 'src',
+            oldBase: `C:/Development/refactoring-angular`,
             newBase: baseLocation
         }
     }
 ];
 
-module.exports = directories;
+let preferences = {
+    indent: { type: 'space', size: 2}
+};
+
+module.exports =
+{
+    preferences,
+    directories,
+    definedGlobals: [
+        'malarkey',
+        'moment',
+        'toastr',
+        'bootstrap',
+        'soundcloud'
+    ]
+};

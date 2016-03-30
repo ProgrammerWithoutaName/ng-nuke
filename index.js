@@ -4,10 +4,6 @@ const path = require('path');
 const fs = require('fs');
 const logger = require('./lib/logger').buildLogger('topLevel');
 
-const baseLocation = path.join(__dirname, 'output');
-
-
-
 function nukeApp() {
     let scriptDefinitions = getScriptDefinitions();
     appRewriter.rewrite(scriptDefinitions)
